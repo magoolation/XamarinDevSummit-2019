@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XamarinDevSummit.Views.GamePage"
+             Title="{Binding Title}">
+
+    <ContentPage.Resources>
+        <Style TargetType="BoxView">
+            <Setter Property="AutomationProperties.HelpText" Value="Double tap to listen" />
+            <Setter Property="FlexLayout.Basis" Value="30%" />
+        </Style>
+    </ContentPage.Resources>
+    <FlexLayout Direction="Row" JustifyContent="SpaceEvenly" AlignItems="Center">
+        <BoxView BackgroundColor="DarkGoldenrod" HeightRequest="120" CornerRadius="60" AutomationProperties.IsInAccessibleTree="True" AutomationProperties.Name="Coin">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CoinCommand}" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+            <BoxView BackgroundColor="Red" HeightRequest="120" WidthRequest="120"  CornerRadius="60" AutomationProperties.IsInAccessibleTree="true" AutomationProperties.Name="Power Up">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding PowerUpCommand}" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+            <BoxView BackgroundColor="DarkGreen" HeightRequest="120" WidthRequest="120"  CornerRadius="60" AutomationProperties.IsInAccessibleTree="true" AutomationProperties.Name="1 Up">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding LifeCommand}" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+    </FlexLayout>
+  
+</ContentPage>

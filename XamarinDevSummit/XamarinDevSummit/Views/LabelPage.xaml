@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XamarinDevSummit.Views.LabelPage"
+             Title="{Binding Title}">
+
+    <StackLayout VerticalOptions="CenterAndExpand" Spacing="10" Padding="30">
+        <Label x:Name="Username" Text="Username" />
+        <Entry AutomationProperties.LabeledBy="{x:Reference Username}"  />
+        <Label x:Name="Password" Text="Password" />
+        <Entry AutomationProperties.LabeledBy="{x:Reference Password}" IsPassword="true" />
+        <Button Text="Sign In" AutomationId="Login" />
+        <Button Text="Sign Up" AutomationId="Create an account" />
+    </StackLayout>
+  
+</ContentPage>

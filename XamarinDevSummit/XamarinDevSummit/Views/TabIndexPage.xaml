@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinDevSummit.Views.TabIndexPage"
+             Title="{Binding Title}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Button Text="Welcome to Xamarin Forms and Prism! 1" Grid.Row="2" TabIndex="2" />
+        <Button Text="Welcome to Xamarin Forms and Prism! 2" Grid.Row="3" TabIndex="3" />
+        <Button Text="Welcome to Xamarin Forms and Prism! 3" Grid.Row="4" TabIndex="1" />
+        <Button Text="Welcome to Xamarin Forms and Prism! 0" Grid.Row="1" TabIndex="4" />
+    </Grid>
+
+</ContentPage>
