@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:vm="clr-namespace:XamarinDevSummit.ViewModels"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="XamarinDevSummit.Views.LabelPage"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             x:DataType="vm:LabelPageViewModel">
 
     <StackLayout VerticalOptions="CenterAndExpand" Spacing="10" Padding="30">
         <Label x:Name="Username" Text="Username" />

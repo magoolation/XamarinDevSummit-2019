@@ -2,10 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:vm="clr-namespace:XamarinDevSummit.ViewModels"
              xmlns:controls="clr-namespace:XamarinDevSummit.CustomControls;assembly=XamarinDevSummit"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="XamarinDevSummit.Views.AccessibleTre"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             x:DataType="vm:AccessibleTreViewModel">
 
     <ContentPage.Resources>
         <Style TargetType="Label">
@@ -14,7 +16,7 @@
     </ContentPage.Resources>
 
     <StackLayout VerticalOptions="CenterAndExpand" Spacing="10" Padding="30">
-        <controls:AccessibleBar Label="Purple" BackgroundColor="Purple" />
+        <controls:AccessibleBar Label="Jesus" BackgroundColor="Purple" />
         <Label Text="Purple" />
         <BoxView HeightRequest="10" BackgroundColor="Black" />
         <controls:AccessibleBar Label="Blue" BackgroundColor="Blue" />
